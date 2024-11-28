@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+}
+/* declare variable to use  */
+:root {
+  --body-color: #f2efe7;
+  --nav-color: #222222;
+  --hover-color: #ffda0b;
+  --font: sans-serif;
+  --service-color: #d9d9d9;
+}
+/* Hero section  */
+.hero {
+  width: 100%;
+  background-color: var(--body-color);
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  height: 100vh;
+}
+.service-section {
+  background-color: var(--service-color);
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+}
+
+.body-bg {
+  background-color: var(--body-color);
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+}
+
+.contact-section {
+  background-color: var(--nav-color) !important;
+}
+
+/* some hover effect  */
+.hover-detail:hover {
+  scale: 1.05 !important;
+  transition: 0.2s ease-in-out !important;
+  translate: (-50%, -50%);
+}
+.hover-link:hover {
+  text-decoration: underline;
+  text-decoration-color: yellow;
+  transition: 0.4s ease-in-out;
+}
+
+/* Add some responsive to website */
+
+/* 1. when screen start form 576px  */
+@media screen and (min-width: 576px) {
+  .profile-img {
+    width: 300px;
+    height: 310px;
+  }
+  .intro-font-size {
+    font-size: clamp(18px, 2vw, 22px) !important;
+  }
+  .heading-font-size {
+    font-size: 24px;
+    text-align: justify;
+  }
+  .font-detail {
+    font-size: 16px;
+  }
+  .font-service {
+    font-size: 20px !important;
+    text-wrap: nowrap !important;
+    font-weight: 600 !important;
+  }
+  .icon-service {
+    width: 22px !important;
+  }
+  .portfolios-card {
+    height: 440px;
+  }
+  .feedback-card {
+    height: 62vh !important;
+  }
+}
+
+/* when screen less than 576 px  */
+@media screen and (max-width: 576px) {
+  .profile-img {
+    width: 200px;
+    height: 210px;
+  }
+  .intro-font-size {
+    font-size: 8px !important;
+  }
+  .heading-font-size {
+    font-size: 16px !important;
+  }
+  .intro-img {
+    width: 8px;
+  }
+  .font-detail {
+    font-size: 9px !important;
+  }
+  .font-service {
+    font-size: 10px !important;
+    text-wrap: wrap;
+  }
+  .icon-service {
+    width: 18px !important;
+  }
+  .portfolios-card {
+    height: 340px !important;
+  }
+  .feedback-card {
+    height: 50vh !important;
+  }
+}
