@@ -19,10 +19,7 @@
   height: 100vh;
 }
 .service-section {
-  background-color: var(--service-color);
-  background-repeat: no-repeat;
-  background-size: cover;
-  object-fit: cover;
+  background-color: var(--service-color) !important;
 }
 
 .body-bg {
@@ -37,21 +34,55 @@
 }
 
 /* some hover effect  */
-.hover-detail:hover {
+.hover-card:hover {
   scale: 1.05 !important;
   transition: 0.2s ease-in-out !important;
   translate: (-50%, -50%);
 }
 .hover-link:hover {
   text-decoration: underline;
-  text-decoration-color: yellow;
-  transition: 0.4s ease-in-out;
+  text-decoration-color: #ffda0b;
+  transition: 0.5s ease-in-out;
+}
+/* set value before and after to use with list  */
+.list::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: #ffda0b;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+}
+.list::before {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: black;
+  position: absolute;
+  bottom: 0px;
+  right: 0;
+}
+.list:hover:after {
+  transition: 0.3s ease-in-out;
+  width: 50%;
+}
+.list:hover:before {
+  transition: 0.3s ease-in-out;
+  width: 50%;
+}
+.hover-txt:hover {
+  color: #877c39ed !important;
 }
 
 /* Add some responsive to website */
 
 /* 1. when screen start form 576px  */
 @media screen and (min-width: 576px) {
+  .logo{
+    width: 100px;
+    height: auto;
+  }
   .profile-img {
     width: 300px;
     height: 310px;
@@ -84,9 +115,13 @@
 
 /* when screen less than 576 px  */
 @media screen and (max-width: 576px) {
+  .logo{
+    width: 80px;
+    height: auto;
+  }
   .profile-img {
-    width: 200px;
-    height: 210px;
+    width: 100px;
+    height: 110px;
   }
   .intro-font-size {
     font-size: 8px !important;
@@ -112,5 +147,13 @@
   }
   .feedback-card {
     height: 50vh !important;
+  }
+  .list:hover:after {
+    transition: 0.3s ease-in-out;
+    width: 0;
+  }
+  .list:hover:before {
+    transition: 0.3s ease-in-out;
+    width: 0 !important;
   }
 }
